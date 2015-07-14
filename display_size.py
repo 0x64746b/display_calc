@@ -15,6 +15,9 @@ import argparse
 import math
 
 
+INCH = 2.54
+
+
 def calculate_size(resolution, diameter):
     aspect_ratio = resolution[0] / resolution[1]
 
@@ -39,8 +42,8 @@ if __name__ == '__main__':
     display_size = calculate_size(args.resolution, args.diameter)
 
     print(
-        'Display size: {:.2f}" x {:.2f}"'.format(
-            display_size[0],
-            display_size[1]
+        'Display size: {:.2f} x {:.2f} cm'.format(
+            display_size[0] * INCH,
+            display_size[1] * INCH,
         )
     )
