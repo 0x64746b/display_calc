@@ -38,4 +38,9 @@ if __name__ == '__main__':
 
     display_size = calculate_size(args.resolution, args.diameter)
 
-    print('Display size: {} x {}'.format(display_size[0], display_size[1]))
+    print(
+        'Display size: {:.2f}" x {:.2f}"'.format(
+            display_size[0],
+            display_size[1]
+        )
+    )
